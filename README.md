@@ -10,13 +10,14 @@ This Repo is about enroll system api - Practice
 
 Register
 ----------
-Endpoint: *POST /api/register*
+Endpoint: **POST /api/register**
 Headers: Content-Type: application/json 
 Request:
-field|desc
----|---
+field | desc
+--- | ---
 teacher | this field is required, insert teacher's email
-students| this field is required, insert students' email in object
+students | this field is required, insert students' email in object
+
 Sample Request:
 ```
 { 
@@ -32,26 +33,37 @@ Sample Request:
 
 get Commons Students
 ----------
-Endpoint: *GET /api/commonstudents*
-Success response status: *HTTP 200*
+Endpoint: **GET /api/commonstudents**
+Success response status: **HTTP 200**
 Request:
-field|desc
----|---
-teacher|this field is required
+field | desc
+--- | ---
+teacher | this field is required
+
 Sample: GET /api/commonstudents?teacher=teacherken%40gmail.com
 
 Suspend Student
 ----------
-Endpoint: *POST /api/suspend*
+Endpoint: **POST /api/suspend**
 Headers: Content-Type: application/json
+Request:
+field | desc
+--- | ---
+student | this field is required
+
 Request body example:
 ```
 { "student" : "studentmary@gmail.com" }
 ```
 
 Receive Notification
-Endpoint: *POST /api/retrievefornotifications *
+Endpoint: **POST /api/retrievefornotifications **
 Headers: Content-Type: application/json 
+Request:
+field | desc
+teacher | required
+notification | required and must be string
+
 Request body example 1: 
 ```
 { 
