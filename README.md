@@ -11,12 +11,15 @@ This Repo is about enroll system api - Practice
 Register
 ----------
 Endpoint: **POST /api/register**
-Headers: Content-Type: application/json 
+
+Headers: Content-Type: application/json
+
 Request:
-field | desc
---- | ---
-teacher | this field is required, insert teacher's email
-students | this field is required, insert students' email in object
+
+|field          | desc                                                     |
+| ------------- | -------------------------------------------------------: |
+| teacher       | this field is required, insert teacher's email           |
+| students      | this field is required, insert students' email in object |
 
 Sample Request:
 ```
@@ -34,22 +37,28 @@ Sample Request:
 get Commons Students
 ----------
 Endpoint: **GET /api/commonstudents**
+
 Success response status: **HTTP 200**
+
 Request:
-field | desc
---- | ---
-teacher | this field is required
+
+|field          | desc                                                     |
+| ------------- | -------------------------------------------------------: |
+| teacher       | this field is required, insert teacher's email           |
 
 Sample: GET /api/commonstudents?teacher=teacherken%40gmail.com
 
 Suspend Student
 ----------
 Endpoint: **POST /api/suspend**
+
 Headers: Content-Type: application/json
+
 Request:
-field | desc
---- | ---
-student | this field is required
+
+|field          | desc                                                     |
+| ------------- | -------------------------------------------------------: |
+| students      | this field is required, insert student' email in string  |
 
 Request body example:
 ```
@@ -57,12 +66,17 @@ Request body example:
 ```
 
 Receive Notification
-Endpoint: **POST /api/retrievefornotifications **
-Headers: Content-Type: application/json 
+-------------
+Endpoint: **POST /api/retrievefornotifications**
+
+Headers: Content-Type: application/json
+
 Request:
-field | desc
-teacher | required
-notification | required and must be string
+
+|field          | desc                                                     |
+| ------------- | -------------------------------------------------------: |
+| teacher       | this field is required, insert teacher's email           |
+| notification  | this field is required, insert in string type            |
 
 Request body example 1: 
 ```
