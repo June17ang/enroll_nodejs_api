@@ -13,7 +13,8 @@ Register
 Endpoint: POST /api/register 
 Headers: Content-Type: application/json 
 Request:
------------------
+|field|desc|
+|---|---|
 |teacher | this field is required, insert teacher's email|
 |students| this field is required, insert students' email in object|
------------------
+|---|---|
